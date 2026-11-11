@@ -1,6 +1,7 @@
 
 @foreach ($books['data'] as $book)
-    <h1>{{ $book['name'] }}</h1>
+
+    <h1>{{ $loop->iteration }} {{ $book['name'] }}</h1>
     <p>{{ $book['desc'] }}</p>
 @endforeach
 

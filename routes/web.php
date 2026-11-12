@@ -5,6 +5,7 @@ use App\Http\Controllers\BookController;
 use Illuminate\Support\Facades\Route;
 
 Route::apiResource('/', BookController::class);
+
 Route::get('/posts', [BookController::class, "percobaan"]);
 
 
@@ -16,7 +17,7 @@ Route::middleware('guest')->group(function () {
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
-    });
-
+        
+    }); 
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });

@@ -1,41 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+</head>
+<body>
+    @foreach ($books['data'] as $book)
 
-@foreach ($books['data'] as $book)
+        <h1>{{ $loop->iteration }} {{ $book['name'] }}</h1>
+        <p>{{ $book['desc'] }}</p>
+    @endforeach
 
-    <h1>{{ $loop->iteration }} {{ $book['name'] }}</h1>
-    <p>{{ $book['desc'] }}</p>
-@endforeach
-
-{{ dump("Hello World") }}
+    {{ dump("Hello World") }}
 
 
 
-    <form action="/" method="POST">
-        @csrf
+        <form action="/" method="POST">
+            @csrf
 
-        <div>
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name">
-            @error('name')
-                <p>{{ $message }}</p>
-               
-            @enderror
-        </div>
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+                @error('name')
+                    <p>{{ $message }}</p>
 
-        <div>
-            <label for="desc">Description</label>
-            <textarea name="desc" id="desc"></textarea>
-            @error('desc')
-                <p>{{ $message }}</p>
-            @enderror
-        </div>
+                @enderror
+            </div>
 
-        <div>
-            <label for="publised_at">Published At</label>
-            <input type="date" name="publised_at" id="publised_at">
-            @error('publised_at')
-                <p>{{ $message }}</p>
-            @enderror
-        </div>
+            <div>
+                <label for="desc">Description</label>
+                <textarea name="desc" id="desc"></textarea>
+                @error('desc')
+                    <p>{{ $message }}</p>
+                @enderror
+            </div>
 
-        <button type="submit">Create Book</button>
-    </form>
+            <div>
+                <label for="publised_at">Published At</label>
+                <input type="date" name="publised_at" id="publised_at">
+                @error('publised_at')
+                    <p>{{ $message }}</p>
+                @enderror
+            </div>
+
+            <button type="submit">Create Book</button>
+        </form>
+</body>
+</html>

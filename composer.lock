@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "62abe6444d6558224257bf24cf675479",
+    "content-hash": "c7d0bdbdd04eac8f71e2971f74153ae2",
     "packages": [
         {
             "name": "brick/math",
@@ -7073,6 +7073,81 @@
             "time": "2026-10-20T16:40:29+00:00"
         },
         {
+            "name": "laravel/mcp",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/mcp.git",
+                "reference": "4df5077a6002e629bb587560b9b48e1ccaea6478"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/mcp/zipball/4df5077a6002e629bb587560b9b48e1ccaea6478",
+                "reference": "4df5077a6002e629bb587560b9b48e1ccaea6478",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "illuminate/console": "^12.41.1|^13.0",
+                "illuminate/container": "^12.41.1|^13.0",
+                "illuminate/contracts": "^12.41.1|^13.0",
+                "illuminate/http": "^12.41.1|^13.0",
+                "illuminate/json-schema": "^12.41.1|^13.0",
+                "illuminate/routing": "^12.41.1|^13.0",
+                "illuminate/support": "^12.41.1|^13.0",
+                "illuminate/validation": "^12.41.1|^13.0",
+                "php": "^8.2",
+                "symfony/process": "^7.4.5|^8.0.5"
+            },
+            "require-dev": {
+                "jasonmccreary/double": "^1.0",
+                "laravel/pint": "^1.20",
+                "orchestra/testbench": "^10.8|^11.0",
+                "pestphp/pest": "^3.8.5|^4.3.2",
+                "phpstan/phpstan": "^2.1.27",
+                "rector/rector": "^2.2.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "Mcp": "Laravel\\Mcp\\Facades\\Mcp"
+                    },
+                    "providers": [
+                        "Laravel\\Mcp\\Server\\McpServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Mcp\\": "src/",
+                    "Laravel\\Mcp\\Server\\": "src/Server/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Rapidly build MCP servers for your Laravel applications.",
+            "homepage": "https://github.com/laravel/mcp",
+            "keywords": [
+                "laravel",
+                "mcp"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/mcp/issues",
+                "source": "https://github.com/laravel/mcp"
+            },
+            "time": "2026-11-10T19:22:22+00:00"
+        },
+        {
             "name": "laravel/pail",
             "version": "v1.2.7",
             "source": {
@@ -7516,6 +7591,67 @@
                 }
             ],
             "time": "2026-08-11T10:17:44+00:00"
+        },
+        {
+            "name": "newdebugbar/newdebugbar",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/newdebugbar/newdebugbar.git",
+                "reference": "929d0c8158b35456214091a9b2e9c54a77bf781c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/newdebugbar/newdebugbar/zipball/929d0c8158b35456214091a9b2e9c54a77bf781c",
+                "reference": "929d0c8158b35456214091a9b2e9c54a77bf781c",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^10.0 || ^11.0 || ^12.0 || ^13.0",
+                "laravel/mcp": ">=0.4 <2.0",
+                "livewire/livewire": "^4.4.3",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": "^7.0",
+                "larastan/larastan": "^3.11",
+                "laravel/pint": "^1.30",
+                "orchestra/testbench": "^8.0 || ^9.0 || ^10.0 || ^11.0",
+                "pestphp/pest": "^2.36.0 || ^3.8 || ^4.4",
+                "pestphp/pest-plugin-browser": "^4.3"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "NewDebugBar\\NewDebugBarServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "NewDebugBar\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Crozat",
+                    "email": "hello@benjamincrozat.com",
+                    "homepage": "https://benjamincrozat.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A modern Laravel debug bar built with Livewire.",
+            "support": {
+                "issues": "https://github.com/newdebugbar/newdebugbar/issues",
+                "source": "https://github.com/newdebugbar/newdebugbar/tree/main"
+            },
+            "time": "2026-09-25T12:10:03+00:00"
         },
         {
             "name": "nunomaduro/collision",
@@ -10199,7 +10335,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "newdebugbar/newdebugbar": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
